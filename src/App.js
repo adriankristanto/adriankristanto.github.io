@@ -1,7 +1,10 @@
+import React from "react";
+import MenuBar from "./components/MenuBar"
+
 function App() {
   return (
-    <div className="App">
-      Hello there!
+    <div className="h-screen w-screen">
+      <MenuBar />
     </div>
   );
 }
