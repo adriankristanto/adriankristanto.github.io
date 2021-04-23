@@ -8,8 +8,8 @@ function MenuBar() {
     const menuBarItemClassName = "px-3 py-1 rounded focus:outline-none focus:bg-gray-500";
 
     return (
-        <div className="w-screen flex flex-row flex-nowrap justify-between items-center bg-black text-gray-50 cursor-default select-none">
-            <div className={menuBarItemClassName}>
+        <div className="w-screen px-2 flex flex-row flex-nowrap justify-between items-center bg-black text-gray-50 cursor-default select-none">
+            <div tabIndex="0" className={menuBarItemClassName}>
                 AK
             </div>
 
@@ -25,7 +25,7 @@ function MenuBar() {
                     <ControlCentre visible={controlCentre}/>
                 </div>
 
-                <div className={menuBarItemClassName}>
+                <div tabIndex="0" className={menuBarItemClassName}>
                     <Clock />
                 </div>
             </div>
