@@ -8,7 +8,7 @@ function MenuBar() {
         focus: false
     });
 
-    const menuBarItemClassName = "px-3 py-1 rounded focus:outline-none focus:bg-gray-500";
+    const menuBarItemClassName = "px-3 py-1 rounded focus:outline-none";
 
     return (
         <div className="w-screen px-2 flex flex-row flex-nowrap justify-between items-center bg-black text-gray-50 cursor-default select-none">
@@ -23,7 +23,7 @@ function MenuBar() {
                 </div>
 
                 {/* Control Centre */}
-                <div tabIndex="0" className={menuBarItemClassName} 
+                <div tabIndex="0" className={`${menuBarItemClassName} ${controlCentre.visible ? 'bg-gray-500' : 'bg-transparent'}`} 
                     onFocus={() => setControlCentre({visible: true, focus: true})} 
                     onBlur={() => setControlCentre({visible: false, focus:false})}
                     // the first click will trigger onFocus to open the control centre -> don't trigger onClick to close it immediately
