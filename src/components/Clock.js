@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-function Clock() {
+function Clock(props) {
     const [currentDateTime, setCurrentDateTime] = useState(new Date());
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -28,7 +28,11 @@ function Clock() {
     let minute = ("00" + currentDateTime.getMinutes().toString()).substr(-2)
     let meridiem = currentDateTime.getHours() < 12 ? 'am' : 'pm'
 
-    return `${day} ${date} ${month} ${hour}:${minute} ${meridiem}`;
+    return (
+        <div tabIndex={props.tabIndex} className={props.className}>
+            {`${day} ${date} ${month} ${hour}:${minute} ${meridiem}`}
+        </div>
+    )
 }
 
 export default Clock;
