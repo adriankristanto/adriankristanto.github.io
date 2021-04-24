@@ -27,19 +27,21 @@ function ControlCentre(props) {
         }
     }, [])
 
+    const tileClassName = "bg-gray-200 dark:bg-gray-700 shadow-lg rounded"
+
     return (
         <div ref={ref}>
-            <div tabIndex={props.tabIndex} className={`${props.className} ${visible ? 'bg-gray-500' : 'bg-transparent'}`} 
+            <div tabIndex={props.tabIndex} className={`${props.className} ${visible && 'bg-gray-100 dark:bg-gray-500' }`} 
                 onClick={() => setVisible(!visible)}
             >
             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zm0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
             </div>
 
             {visible && (
-            <div className="absolute my-0.5 top-8 right-0.5 rounded-lg bg-black">
+            <div className="absolute my-0.5 top-8 right-0.5 rounded-lg bg-gray-300 dark:bg-black">
 
-                <div className='flex mt-2 mb-1'>
-                    <div className='flex flex-col px-4 py-1 ml-2 mr-1 bg-gray-600 rounded justify-center'>
+                <div className='flex my-3'>
+                    <div className={`flex flex-col px-4 py-1 mr-1.5 ml-3 ${tileClassName} justify-center`}>
                         <div className='flex mb-3'>
                             <div className='mr-4'>
                                 {/* Wi-Fi */}
@@ -69,8 +71,8 @@ function ControlCentre(props) {
                         </div>
                     </div>
 
-                    <div className='flex flex-col ml-1 mr-2'>
-                        <div className='flex px-2 py-4 bg-gray-600 rounded'>
+                    <div className='flex flex-col ml-1.5 mr-3'>
+                        <div className={`flex px-2 py-4 ${tileClassName} mb-1`}>
                             {/* Battery */}
                             <div className='mx-4'>
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4zM11 20v-5.5H9L13 7v5.5h2L11 20z"/></svg>
@@ -81,7 +83,7 @@ function ControlCentre(props) {
                         </div>
 
                         <div className="flex pt-2 justify-between text-sm">
-                            <div className="w-1/2 mr-1 px-2 py-2 flex flex-col items-center text-center bg-gray-600 rounded">
+                            <div className={`w-1/2 mr-1.5 px-2 py-2 flex flex-col items-center text-center ${tileClassName}`}>
                                 <div className="my-1">
                                     {/* Airplane Mode */}
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M22,16v-2l-8.5-5V3.5C13.5,2.67,12.83,2,12,2s-1.5,0.67-1.5,1.5V9L2,14v2l8.5-2.5V19L8,20.5L8,22l4-1l4,1l0-1.5L13.5,19 v-5.5L22,16z"/><path d="M0,0h24v24H0V0z" fill="none"/></g></svg>
@@ -91,7 +93,7 @@ function ControlCentre(props) {
                                     <p>Mode</p>
                                 </div>
                             </div>
-                            <div className="w-1/2 ml-1 px-2 py-2 flex flex-col items-center text-center bg-gray-600 rounded">
+                            <div className={`w-1/2 ml-1.5 px-2 py-2 flex flex-col items-center text-center ${tileClassName}`}>
                                 <div className="my-1">
                                     {/* Do Not Disturb */}
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M7,11v2h10v-2H7z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8 s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"/></g></g></svg>
@@ -105,7 +107,7 @@ function ControlCentre(props) {
                     </div>
                 </div>
 
-                <div className='flex mx-2 my-2 rounded bg-gray-600 px-4 py-2 justify-between'>
+                <div className={`flex mx-3 my-3 ${tileClassName} px-4 py-2 justify-between`}>
                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 9v6h4l5 5V4L7 9H3zm7-.17v6.34L7.83 13H5v-2h2.83L10 8.83zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"/></svg>
                     <input  
                         className="w-5/6"
@@ -114,7 +116,7 @@ function ControlCentre(props) {
                         step="1"/>
                 </div>
 
-                <div className='flex mx-2 my-2 rounded bg-gray-600 px-4 py-2 justify-between'>
+                <div className={`flex mx-3 my-3 ${tileClassName} px-4 py-2 justify-between`}>
                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
                     <input 
                         className="w-5/6"
