@@ -38,7 +38,7 @@ function ControlCentre(props) {
             </div>
 
             {visible && (
-            <div className="absolute my-0.5 top-8 right-0.5 rounded-lg bg-gray-300 dark:bg-black">
+            <div className="absolute my-0.5 top-8 right-0.5 rounded-lg bg-gray-300 dark:bg-black shadow-lg">
 
                 <div className='flex my-3'>
                     <div className={`flex flex-col px-4 py-1 mr-1.5 ml-3 ${tileClassName} justify-center`}>
