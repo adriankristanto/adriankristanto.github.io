@@ -1,6 +1,3 @@
-/**
- * On implementing dropdown menu: https://ncoughlin.com/posts/react-dropdown/
- */
 import React from "react";
 import DropDownUtility from "./DropDownUtility";
 
