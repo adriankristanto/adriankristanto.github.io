@@ -1,5 +1,5 @@
 import React from "react";
-import DropDownUtility from "./DropDownUtility";
+import DropDownUtility from "./utilities/DropDownUtility";
 
 function ControlCentre(props) {
     const tileClassName = "bg-gray-200 dark:bg-gray-700 shadow-lg rounded"
