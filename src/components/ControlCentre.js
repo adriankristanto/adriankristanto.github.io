@@ -1,43 +1,17 @@
 /**
  * On implementing dropdown menu: https://ncoughlin.com/posts/react-dropdown/
  */
-import React, {useState, useEffect, useRef} from "react";
+import React from "react";
+import DropDownUtility from "./DropDownUtility";
 
 function ControlCentre(props) {
-    const [visible, setVisible] = useState(false);
-    // create a ref variable, add it to the top <div> of the dropdown menu, i.e <div ref={ref}>
-    const ref = useRef();
-
-    useEffect(() => {
-        const onBodyClick = e => {
-            // if the any of the children of <div ref={ref}> is clicked, do nothing
-            // ref.current: avoiding ref is null error
-            if (ref.current && ref.current.contains(e.target)){
-                return
-            }
-            // else, toggle the menu
-            setVisible(false)
-        }
-
-        document.body.addEventListener('click', onBodyClick);
-        
-        // to avoid ref.current is null error
-        return function cleanup() {
-            document.body.removeEventListener('click', onBodyClick);
-        }
-    }, [])
-
     const tileClassName = "bg-gray-200 dark:bg-gray-700 shadow-lg rounded"
 
     return (
-        <div ref={ref}>
-            <div tabIndex={props.tabIndex} className={`${props.className} ${visible && 'bg-gray-100 dark:bg-gray-500' }`} 
-                onClick={() => setVisible(!visible)}
-            >
-            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zm0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </div>
-
-            {visible && (
+        <DropDownUtility tabIndex={props.tabIndex} className={props.className} 
+            // Control Centre icon 
+            icon={<svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zm0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>}
+        >
             <div className="absolute my-0.5 top-8 right-0.5 rounded-lg bg-gray-300 dark:bg-black shadow-xl">
 
                 <div className='flex my-3'>
@@ -126,9 +100,9 @@ function ControlCentre(props) {
                         min="0" max="10" 
                         step="1"/>
                 </div> 
+
             </div>
-            )}
-        </div>
+        </DropDownUtility>
     )
 }
 
