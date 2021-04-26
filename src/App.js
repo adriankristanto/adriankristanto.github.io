@@ -8,11 +8,10 @@ function App() {
   const [focusedApp, setFocusedApp] = useState("");
 
   const handleAppIconClick = (appId) => {
-    if (openedApps.includes(appId)) {
-      setFocusedApp(appId)
-    } else {
+    if (!openedApps.includes(appId)) {
       setOpenedApps([...openedApps, appId])
     }
+    setFocusedApp(appId)
   }
 
   const handleWindowClick = (appId) => {
