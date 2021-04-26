@@ -8,8 +8,8 @@ function AppWindow(props) {
      * props.focused
      */
     return (
-        <Draggable bounds="parent">
-            <div tabIndex={props.tabIndex} className={`absolute top-9 left-1 w-full h-1/2 xs:w-96 xs:h-96 rounded-lg bg-red-500 ${props.focused ? 'z-30' : 'z-0'}`} onPointerDown={_ => props.handleWindowClick(props.appId)}>
+        <Draggable bounds="parent" allowAnyClick={false}>
+            <div tabIndex={props.tabIndex} className={`absolute top-9 left-1 w-full h-1/2 xs:w-3/5 xs:h-3/5 rounded-lg bg-red-500 ${props.focused ? 'z-30' : 'z-0'}`} onPointerDown={_ => props.handleWindowClick(props.appId)}>
                 <div>
                     {props.appId}
                 </div>
