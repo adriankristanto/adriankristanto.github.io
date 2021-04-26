@@ -9,7 +9,7 @@ function ControlCentre(props) {
             // Control Centre icon 
             icon={<svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zm0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>}
         >
-            <div className="w-screen sm:w-auto absolute my-0.5 top-8 right-0 sm:right-0.5 rounded-lg bg-gray-300 dark:bg-black shadow-xl text-xs sm:text-base">
+            <div className="w-screen xs:w-auto absolute my-0.5 top-8 right-0 xs:right-0.5 rounded-lg bg-gray-300 dark:bg-black shadow-xl text-xs xs:text-sm z-50">
 
                 <div className='flex my-3'>
                     <div className={`flex flex-col px-4 py-1 mr-1.5 ml-3 ${tileClassName} justify-center`}>
@@ -42,7 +42,7 @@ function ControlCentre(props) {
                         </div>
                     </div>
 
-                    <div className='flex flex-col ml-1.5 mr-3'>
+                    <div className='flex flex-col ml-1.5 mr-3 w-full'>
                         <div className={`flex px-2 py-4 ${tileClassName} mb-1 items-center`}>
                             {/* Battery */}
                             <div className='mx-4'>
@@ -59,7 +59,7 @@ function ControlCentre(props) {
                                     {/* Airplane Mode */}
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M22,16v-2l-8.5-5V3.5C13.5,2.67,12.83,2,12,2s-1.5,0.67-1.5,1.5V9L2,14v2l8.5-2.5V19L8,20.5L8,22l4-1l4,1l0-1.5L13.5,19 v-5.5L22,16z"/><path d="M0,0h24v24H0V0z" fill="none"/></g></svg>
                                 </div>
-                                <div className="text-xs sm:text-sm">
+                                <div className="text-xs">
                                     <p>Airplane</p>
                                     <p>Mode</p>
                                 </div>
@@ -69,7 +69,7 @@ function ControlCentre(props) {
                                     {/* Do Not Disturb */}
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M7,11v2h10v-2H7z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8 s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"/></g></g></svg>
                                 </div>
-                                <div className="text-xs sm:text-sm">
+                                <div className="text-xs">
                                     <p>Do Not</p>
                                     <p>Disturb</p>
                                 </div>

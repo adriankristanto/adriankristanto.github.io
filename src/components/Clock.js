@@ -29,7 +29,7 @@ function Clock(props) {
     let meridiem = currentDateTime.getHours() < 12 ? 'am' : 'pm'
 
     return (
-        <div tabIndex={props.tabIndex} className={`${props.className} text-xs sm:text-base`}>
+        <div tabIndex={props.tabIndex} className={`${props.className} text-xs xs:text-base`}>
             {`${day} ${date} ${month} ${hour}:${minute} ${meridiem}`}
         </div>
     )
