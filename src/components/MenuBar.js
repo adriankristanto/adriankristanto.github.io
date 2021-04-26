@@ -12,7 +12,7 @@ function MenuBar() {
                 AK
             </div>
 
-            <div className="flex">
+            <div className="flex justify-center items-center">
                 <DarkMode tabIndex="0" className={menuBarItemClassName}/>
 
                 <ControlCentre tabIndex="0" className={menuBarItemClassName} />
