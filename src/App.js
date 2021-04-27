@@ -43,8 +43,8 @@ function App() {
     // Mobile browser has different viewport implementation, so, use h-full instead of h-screen
     <div className="w-screen h-full">
       <MenuBar />
-      {/* parent component to set draggable bounds, 32px = 2rem, which is the height of the menubar & 72px is the height of the dock */}
-      <div style={{height: window.innerHeight - 32 - 72}} className="absolute top-8 w-screen">
+      {/* parent component to set draggable bounds, 32px = 2rem, which is the height of the menubar & 72px is the height of the dock with 2px padding from the bottom */}
+      <div style={{height: window.innerHeight - 32 - 74}} className="absolute top-8 w-screen">
         {renderOpenedApps()}
       </div>
       <Dock handleAppIconClick={handleAppIconClick}/>
