@@ -60,11 +60,11 @@ function AppWindow(props) {
                     {/* maximize */}
                     <div id="maximize" className="mx-1.5 rounded-full bg-green-500 px-2 py-2" />
                 </div>
-                <div style={{height: `${(window.innerHeight - 32 - 74) * 0.6 - 24}px`, width: "100%"}}>
+                <div style={{height: `${windowState.isMaximized ? (window.innerHeight - 32 - 74) - 24 : (window.innerHeight - 32 - 74) * 0.6 - 24}px`, width: "100%"}}>
                     {props.appId}
                 </div>
                 {/* added cover when dragging to prevent dragging issue with iframe */}
-                {isDragging && <div style={{zIndex: 1000, position: 'absolute', top: 24, left: 0, width: '100%', height:'100%'}} />}
+                {isDragging && <div style={{zIndex: 1000, position: 'absolute', top: 24, left: 0, width: '100%', height:`${windowState.isMaximized ? (window.innerHeight - 32 - 74) - 24 : (window.innerHeight - 32 - 74) * 0.6 - 24}px`}} />}
             </div>
         </Draggable>
     );
