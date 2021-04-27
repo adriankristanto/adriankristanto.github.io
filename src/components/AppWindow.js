@@ -32,7 +32,6 @@ function AppWindow(props) {
                     const rect = selectedWindow.getBoundingClientRect()
                     const x = rect.x
                     const y = rect.y - 32 // position from the viewport - height of the menubar
-                    console.log(rect.x, rect.y)
                     setWindowPosition({x: x, y: y})
                     // move the window to top left before maximising
                     selectedWindow.style.transform = "translate(0px, 0px)"
