@@ -12,6 +12,7 @@ function AppWindow(props) {
         isMaximized: false,
         isMinimized: false
     })
+    const [isDragging, setIsDragging] = useState(false)
 
     const handlePointerDown = e => {
         switch(e.target.id) {
@@ -45,9 +46,13 @@ function AppWindow(props) {
     }
 
     return (
-        <Draggable handle=".handle" defaultPosition={{x: windowPosition.x, y: windowPosition.x}} bounds="parent" allowAnyClick={false}>
+        <Draggable 
+            handle=".handle" defaultPosition={{x: windowPosition.x, y: windowPosition.x}} bounds="parent" allowAnyClick={false}
+            onStart={_ => setIsDragging(true)}
+            onStop={_ => setIsDragging(false)}
+        >
             <div id={`${props.appId}-window`} tabIndex={props.tabIndex} className={`absolute ${windowState.isMaximized ? "w-screen h-full" : "w-3/5 h-3/5"} ${windowState.isMinimized && "invisible"} rounded-lg bg-red-500 ${props.focused ? 'z-30' : 'z-0'}`} onPointerDown={e => handlePointerDown(e)}>
-                <div className="handle bg-gray-300 dark:bg-black flex justify-start rounded-t-lg px-1.5 py-1">
+                <div className="handle bg-gray-300 dark:bg-black flex justify-start rounded-t-lg px-1.5 py-1 z-50">
                     {/* close */}
                     <div id="close" className="mx-1.5 rounded-full bg-red-500 px-2 py-2"/>
                     {/* minimize */}
@@ -55,9 +60,11 @@ function AppWindow(props) {
                     {/* maximize */}
                     <div id="maximize" className="mx-1.5 rounded-full bg-green-500 px-2 py-2" />
                 </div>
-                <div>
+                <div style={{height: `${(window.innerHeight - 32 - 74) * 0.6 - 24}px`, width: "100%"}}>
                     {props.appId}
                 </div>
+                {/* added cover when dragging to prevent dragging issue with iframe */}
+                {isDragging && <div style={{zIndex: 1000, position: 'absolute', top: 24, left: 0, width: '100%', height:'100%'}} />}
             </div>
         </Draggable>
     );
