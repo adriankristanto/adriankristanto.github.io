@@ -51,7 +51,7 @@ function AppWindow(props) {
             onStart={_ => setIsDragging(true)}
             onStop={_ => setIsDragging(false)}
         >
-            <div id={`${props.appId}-window`} tabIndex={props.tabIndex} className={`absolute ${windowState.isMaximized ? "w-screen h-full" : "w-3/5 h-3/5"} ${windowState.isMinimized && "invisible"} rounded-lg bg-red-500 ${props.focused ? 'z-30' : 'z-0'}`} onPointerDown={e => handlePointerDown(e)}>
+            <div id={`${props.appId}-window`} tabIndex={props.tabIndex} className={`absolute ${windowState.isMaximized ? "duration-300 w-screen h-full" : "w-3/5 h-3/5"} ${windowState.isMinimized && "invisible"} rounded-lg bg-red-500 ${props.focused ? 'z-30' : 'z-0'}`} onPointerDown={e => handlePointerDown(e)}>
                 <div className="handle bg-gray-300 dark:bg-black flex justify-start rounded-t-lg px-1.5 py-1 z-50">
                     {/* close */}
                     <div id="close" className="mx-1.5 rounded-full bg-red-500 px-2 py-2"/>
