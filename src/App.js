@@ -12,17 +12,28 @@ function App() {
       setOpenedApps([...openedApps, appId])
     }
     setFocusedApp(appId)
+    // append recently focused app at the end of the openedApp stack
+    setOpenedApps(openedApps.filter(openedAppId => openedAppId !== appId).concat(appId))
   }
 
   const handleWindowClick = (appId) => {
     setFocusedApp(appId)
+    // append recently focused app at the end of the openedApp stack
+    setOpenedApps(openedApps.filter(openedAppId => openedAppId !== appId).concat(appId))
+  }
+
+  const handleAppClose = (appId) => {
+    // filter out the closed appId
+    setOpenedApps(openedApps.filter(openedAppId => openedAppId !== appId))
+    // give focus to the last opened app
+    setFocusedApp(openedApps[openedApps.length - 1])
   }
 
   const renderOpenedApps = () => {
     const appsJsx = []
     openedApps.forEach((appId, index) => {
       appsJsx.push(
-        <AppWindow key={index} tabIndex="0" appId={appId} focused={appId === focusedApp} handleWindowClick={handleWindowClick}/>
+        <AppWindow key={index} tabIndex="0" appId={appId} focused={appId === focusedApp} handleWindowClick={handleWindowClick} handleAppClose={handleAppClose}/>
       )
     })
     return appsJsx;
