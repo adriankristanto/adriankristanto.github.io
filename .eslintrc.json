@@ -9,6 +9,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:react/jsx-runtime",
         "plugin:cypress/recommended",
+        "plugin:chai-friendly/recommended",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
@@ -24,6 +25,7 @@
         "react-hooks",
         "@typescript-eslint",
         "prettier",
+        "chai-friendly",
         "cypress"
     ],
     "rules": {},
