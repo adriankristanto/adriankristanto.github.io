@@ -7,7 +7,7 @@ function App() {
     const [count, setCount] = useState(0)
 
     return (
-        <motion.div className="App">
+        <div className="App">
             <div>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -32,7 +32,7 @@ function App() {
             <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
             </p>
-        </motion.div>
+        </div>
     )
 }
 
