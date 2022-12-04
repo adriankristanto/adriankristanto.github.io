@@ -13,7 +13,7 @@
         "cy:test-unit": "cypress run --component",
         "cy:open-unit": "cypress open --component",
         "cy:test-e2e": "cypress run",
-        "cy:run-e2e": "start-server-and-test start http://localhost:3030 cy:test-e2e",
+        "cy:run-e2e": "start-server-and-test dev http://localhost:5173 cy:test-e2e",
         "cy:open-e2e": "cypress open --e2e"
     },
     "dependencies": {
