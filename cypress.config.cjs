@@ -1,10 +1,10 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  component: {
-    devServer: {
-      framework: 'create-react-app',
-      bundler: 'vite',
-    },
-  },
+    component: {
+        devServer: {
+            framework: 'react',
+            bundler: 'vite'
+        }
+    }
 })
