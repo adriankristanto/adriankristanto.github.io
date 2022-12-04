@@ -14,7 +14,8 @@
         "cy:open-unit": "cypress open --component",
         "cy:test-e2e": "cypress run",
         "cy:run-e2e": "start-server-and-test dev http://localhost:5173 cy:test-e2e",
-        "cy:open-e2e": "cypress open --e2e"
+        "cy:open-e2e": "cypress open --e2e",
+        "cy:e2e": "start-server-and-test dev http://localhost:5173 cy:open-e2e"
     },
     "dependencies": {
         "framer-motion": "^7.6.18",
