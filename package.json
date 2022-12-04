@@ -11,7 +11,10 @@
         "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
         "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "cy:test-unit": "cypress run --component",
-        "cy:open-unit": "cypress open --component"
+        "cy:open-unit": "cypress open --component",
+        "cy:test-e2e": "cypress run",
+        "cy:run-e2e": "start-server-and-test start http://localhost:3030 cy:test-e2e",
+        "cy:open-e2e": "cypress open --e2e"
     },
     "dependencies": {
         "framer-motion": "^7.6.18",
@@ -40,6 +43,7 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "postcss": "^8.4.19",
         "prettier": "^2.8.0",
+        "start-server-and-test": "^1.14.0",
         "tailwindcss": "^3.2.4",
         "typescript": "*",
         "vite": "^3.2.3"
