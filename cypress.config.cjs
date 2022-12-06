@@ -1,16 +1,23 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  component: {
-    devServer: {
-      framework: "react",
-      bundler: "vite",
-    },
-  },
+    component: {
+        devServer: {
+            framework: 'react',
+            bundler: 'vite'
+        },
+        setupNodeEvents(on, config) {
+            require('@cypress/code-coverage/task')(on, config)
 
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+            return config
+        }
     },
-  },
-});
+
+    e2e: {
+        setupNodeEvents(on, config) {
+            require('@cypress/code-coverage/task')(on, config)
+
+            return config
+        }
+    }
+})

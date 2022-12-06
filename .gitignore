@@ -35,3 +35,7 @@ dist-ssr
 # cypress
 cypress/videos
 cypress/screenshots
+
+# code coverage
+coverage
+.nyc_output
