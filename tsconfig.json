@@ -15,7 +15,7 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react-jsx",
-        "types": ["cypress"]
+        "types": ["cypress", "vite-plugin-svgr/client"]
     },
     "include": ["src"],
     "references": [{ "path": "./tsconfig.node.json" }]
