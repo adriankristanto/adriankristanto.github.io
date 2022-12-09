@@ -1254,7 +1254,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.46.0
     "@vitejs/plugin-react": ^2.2.0
     autoprefixer: ^10.4.13
-    cypress: ^12.0.1
+    cypress: ^12.0.2
     eslint: ^8.29.0
     eslint-config-prettier: ^8.5.0
     eslint-config-standard-with-typescript: ^23.0.0
@@ -1272,7 +1272,7 @@ __metadata:
     prettier: ^2.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
-    start-server-and-test: ^1.15.1
+    start-server-and-test: ^1.15.2
     tailwindcss: ^3.2.4
     typescript: ^4.9.4
     vite: ^3.2.5
@@ -1570,12 +1570,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
-  version: 0.21.4
-  resolution: "axios@npm:0.21.4"
+"axios@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "axios@npm:0.25.0"
   dependencies:
-    follow-redirects: ^1.14.0
-  checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
+    follow-redirects: ^1.14.7
+  checksum: 2a8a3787c05f2a0c9c3878f49782357e2a9f38945b93018fb0c4fd788171c43dceefbb577988628e09fea53952744d1ecebde234b561f1e703aa43e0a598a3ad
   languageName: node
   linkType: hard
 
@@ -2073,9 +2073,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^12.0.1":
-  version: 12.0.1
-  resolution: "cypress@npm:12.0.1"
+"cypress@npm:^12.0.2":
+  version: 12.0.2
+  resolution: "cypress@npm:12.0.2"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -2121,7 +2121,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 07f7d61b6fc1fc5ef9e2672b36da3e3b0fcf5996a5e0786b548f370ec23ce908b5a6de4132db73110f48c32132db3e7ff31d176d0ed83c63fd09709ff3c982e2
+  checksum: 9b5394749cd8363a62554fe03d64329c906df5ccf5f0f2899b68678c7c51eef0acf91d2b93c5ade8312e803d92f7972ef3265a489ab9caaf1a4100b731b9fee3
   languageName: node
   linkType: hard
 
@@ -3327,7 +3327,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0":
+"follow-redirects@npm:^1.14.7":
   version: 1.15.2
   resolution: "follow-redirects@npm:1.15.2"
   peerDependenciesMeta:
@@ -4329,7 +4329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joi@npm:^17.4.0":
+"joi@npm:^17.6.0":
   version: 17.7.0
   resolution: "joi@npm:17.7.0"
   dependencies:
@@ -5797,7 +5797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.1.0, rxjs@npm:^7.5.1":
+"rxjs@npm:^7.5.1, rxjs@npm:^7.5.4":
   version: 7.6.0
   resolution: "rxjs@npm:7.6.0"
   dependencies:
@@ -6046,9 +6046,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"start-server-and-test@npm:^1.15.1":
-  version: 1.15.1
-  resolution: "start-server-and-test@npm:1.15.1"
+"start-server-and-test@npm:^1.15.2":
+  version: 1.15.2
+  resolution: "start-server-and-test@npm:1.15.2"
   dependencies:
     arg: ^5.0.2
     bluebird: 3.7.2
@@ -6057,12 +6057,12 @@ __metadata:
     execa: 5.1.1
     lazy-ass: 1.6.0
     ps-tree: 1.2.0
-    wait-on: 6.0.0
+    wait-on: 6.0.1
   bin:
     server-test: src/bin/start.js
     start-server-and-test: src/bin/start.js
     start-test: src/bin/start.js
-  checksum: ac4251afb07c9d8559d2873deca39e2afc0670d295c5acb5cee9527775792246319e2a6753e4def3e028a11a0f98f8d4940b3e565b1d12a1c2c58aa8c251987d
+  checksum: 3334959d8c7fb72b9a88672f531a21a90146e8c855d2f8a4aca57b116221e3d0db4dd23a572c02bf2e08cc30266dde9f95cb7e53089223e1e1c5dc8ac44c3d20
   languageName: node
   linkType: hard
 
@@ -6640,18 +6640,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wait-on@npm:6.0.0":
-  version: 6.0.0
-  resolution: "wait-on@npm:6.0.0"
+"wait-on@npm:6.0.1":
+  version: 6.0.1
+  resolution: "wait-on@npm:6.0.1"
   dependencies:
-    axios: ^0.21.1
-    joi: ^17.4.0
+    axios: ^0.25.0
+    joi: ^17.6.0
     lodash: ^4.17.21
     minimist: ^1.2.5
-    rxjs: ^7.1.0
+    rxjs: ^7.5.4
   bin:
     wait-on: bin/wait-on
-  checksum: 6ae7bd2a933715c3b2f1c49f033d97c576b2c6a0257420d4c83964d2846c3967bfce33bc9af9a1a631ef38dfa6185be03cef57d2867c8c30c523278f964ac9e3
+  checksum: e4d62aa4145d99fe34747ccf7506d4b4d6e60dd677c0eb18a51e316d38116ace2d194e4b22a9eb7b767b0282f39878ddcc4ae9440dcb0c005c9150668747cf5b
   languageName: node
   linkType: hard
 
