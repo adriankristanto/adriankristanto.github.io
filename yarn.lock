@@ -1346,7 +1346,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.47.0
     "@vitejs/plugin-react": ^3.0.0
     autoprefixer: ^10.4.13
-    cypress: ^12.1.0
+    cypress: ^12.2.0
     eslint: ^8.30.0
     eslint-config-prettier: ^8.5.0
     eslint-config-standard-with-typescript: ^24.0.0
@@ -1359,7 +1359,7 @@ __metadata:
     eslint-plugin-promise: ^6.1.1
     eslint-plugin-react: ^7.31.11
     eslint-plugin-react-hooks: ^4.6.0
-    framer-motion: ^7.10.2
+    framer-motion: ^7.10.3
     postcss: ^8.4.20
     prettier: ^2.8.1
     react: ^18.2.0
@@ -2165,9 +2165,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^12.1.0":
-  version: 12.1.0
-  resolution: "cypress@npm:12.1.0"
+"cypress@npm:^12.2.0":
+  version: 12.2.0
+  resolution: "cypress@npm:12.2.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -2213,7 +2213,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 238ea125f396594a84ba096e0eaebe6f0d6b60b3b232a3f6e36420f9fa7a9218211df8dc6ad2a4f6cc0cc2fd77d4e0eb0932b409a73ff8434e78e880a36f59a7
+  checksum: fae721114f2001705cdd59a031d5d41d93092e4bc66561021e7890cd01004ac8e037dbd22e22fe0fac325e8e4420a52e1d75254f4e8b7f7a63e84d3fdb86626c
   languageName: node
   linkType: hard
 
@@ -3324,9 +3324,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^7.10.2":
-  version: 7.10.2
-  resolution: "framer-motion@npm:7.10.2"
+"framer-motion@npm:^7.10.3":
+  version: 7.10.3
+  resolution: "framer-motion@npm:7.10.3"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": ^10.15.3
@@ -3338,7 +3338,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 75c7843cf83a1213237b4881e06811a01ae5bc9686ff3efdd5494ad23f28cfdf35ad0f6b907110b83f04ddef92412db8d296e28a7297dc83a9b68125311d9f35
+  checksum: 20ce8459e7e3c631af5261215acd2217f57f15d64448e2bd64eecf74d3406552523082c182211af086e01b44daad7a0c216d5135a3f8ae56fb63e152e54233aa
   languageName: node
   linkType: hard
 
